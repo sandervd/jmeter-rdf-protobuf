@@ -1,0 +1,10 @@
+services:
+  jmeter:
+    image: justb4/jmeter
+    environment:
+     - DISPLAY=${DISPLAY}
+    volumes:
+     - /tmp/.X11-unix:/tmp/.X11-unix
+     - ./tests:/home/jmeter/
+     - ./plugins:/plugins
+        #command: -n -t parallel_member_ingest.jmx -l report.jtl -e -o output/
