@@ -23,14 +23,20 @@
  import kg.apc.jmeter.gui.GuiBuilderHelper;
  import org.apache.jmeter.config.gui.AbstractConfigGui;
  import org.apache.jmeter.testelement.TestElement;
- 
+ import org.apache.jorphan.logging.LoggingManager;
+ import org.apache.log.Logger;
+ import org.hsqldb.persist.Log;
+
  import javax.swing.*;
  import java.awt.*;
- 
+ import java.io.IOException;
+
  public class RDFProtoGui extends AbstractConfigGui {
  
      // TODO: use full URL and change cmn version to 0.6 after it has been released
      public static final String WIKIPAGE = "RDFProto";
+
+     private static final Logger LOGGER = LoggingManager.getLoggerForClass();
  
      private JTextField filenameField;
  
@@ -126,18 +132,18 @@
          configureTestElement(element);
          if (element instanceof RDFProto) {
             RDFProto rdfProto = (RDFProto) element;
-            rdfProto.setFilename(this.filenameField.getText());
+             try {
+                 if (!this.filenameField.getText().equals(""))
+                     rdfProto.setProtobuf(this.filenameField.getText());
+             } catch (IOException e) {
+                 throw new RuntimeException(e);
+             }
          }
      }
  
      @Override
      public void configure(TestElement element) {
          super.configure(element);
- 
-         if (element instanceof RDFProto) {
-            RDFProto rdfProto = (RDFProto) element;
-            filenameField.setText(rdfProto.getFilename());
-         }
      }
  
      @Override

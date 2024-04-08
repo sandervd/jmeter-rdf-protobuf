@@ -1,5 +1,6 @@
 package be.vlaanderen.rdfproto;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.jmeter.config.ConfigTestElement;
 import org.apache.jmeter.engine.event.LoopIterationEvent;
 import org.apache.jmeter.engine.event.LoopIterationListener;
@@ -14,8 +15,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Base64;
+
 
 public class RDFProto extends ConfigTestElement
         implements NoThreadClone, LoopIterationListener, NoConfigMerge, TestStateListener {
@@ -24,11 +25,10 @@ public class RDFProto extends ConfigTestElement
 
     private static final Logger log = LoggerFactory.getLogger(RDFProto.class);
 
-    public static final String FILENAME = "filename";
+    public static final String FILECONTENTS = "filecontents";
 
-    public static final String VARIABLE_NAMES = "variableNames";
 
-    private String filename;    // Real filename, with substituted variables
+    private byte[] protobuf;
 
     private RDFProtobufTransformer protobufRDFTransform = null;
 
@@ -62,41 +62,28 @@ public class RDFProto extends ConfigTestElement
     public void testStarted() {
         trySetFinalFilename();
     }
-    
-    public String getFilename() {
-        return getPropertyAsString(FILENAME);
+
+    public byte[] getProtobuf() {
+        String protobuf_encoded = getPropertyAsString(FILECONTENTS);
+        return Base64.getDecoder().decode(protobuf_encoded);
     }
 
-    public void setFilename(String filename) {
-        setProperty(FILENAME, filename);
+    public void setProtobuf(String filename) throws IOException {
+        if (null == filename)
+            return;
+        System.out.print("filename: " + filename);
+        File inputFile = new File(filename);
+        InputStream inputStream = new FileInputStream(inputFile);
+        byte[] bytes = IOUtils.toByteArray(inputStream);
+        String protobuf_encoded = Base64.getEncoder().encodeToString(bytes);
+        setProperty(FILECONTENTS, protobuf_encoded);
     }
 
     public void trySetFinalFilename() {
-        if (filename == null) {
-            filename = getFinalFilename();
-            protobufRDFTransform = new RDFProtobufTransformer(filename);
+        if (protobuf == null) {
+            protobuf = getProtobuf();
+            protobufRDFTransform = new RDFProtobufTransformer(protobuf);
         }
-    }
-
-    private String getFinalFilename() {
-        String ret = getFilename();
-
-        JMeterVariables variables = JMeterContextService.getContext().getVariables();
-        Pattern pattern = Pattern.compile("\\$\\{([a-z]+)}");
-        Matcher matcher = pattern.matcher(ret);
-        while (matcher.find()) {
-            String contents;
-            try {
-                contents = variables.get(matcher.group(1));
-            } catch (NullPointerException e) {
-                contents = null;
-            }
-
-            if (contents != null)
-                ret = ret.replace(matcher.group(), contents);
-        }
-
-        return ret;
     }
 
    

@@ -11,18 +11,14 @@ import java.util.concurrent.atomic.*;
 
 public class RDFProtobufTransformer {
     private static final Logger log = LoggerFactory.getLogger(RDFProto.class);
-
-    final File inputFile;
+    final byte[] protobuf;
     AtomicInteger counter = new AtomicInteger();
-    public RDFProtobufTransformer(String filename) {
-        inputFile = new File(filename);
-        if (inputFile.isFile()) {
-            log.debug("File not found: " + filename);
-        }
+    public RDFProtobufTransformer(byte[] protobuf_) {
+        protobuf = protobuf_;
     }
 
     public ByteArrayOutputStream getNext() throws IOException {
-        InputStream inputStream = new DataInputStream(new FileInputStream(inputFile));
+        InputStream inputStream = new DataInputStream(new ByteArrayInputStream(protobuf));
         return appendSubjects(inputStream, counter.getAndIncrement());
     }
 

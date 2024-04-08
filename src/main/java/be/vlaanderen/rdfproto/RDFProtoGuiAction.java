@@ -28,7 +28,8 @@ public class RDFProtoGuiAction implements ActionListener {
         JTextArea checkArea = RDFProtoGui.getCheckArea();
         
         try {
-            config.setFilename(compoundValue(config.getFilename()));
+            //config.setProtobuf();
+            //config.setFilename(compoundValue(config.getFilename()));
             
             JMeterVariables jMeterVariables = new JMeterVariables();
             JMeterContextService.getContext().setVariables(jMeterVariables);
@@ -51,7 +52,7 @@ public class RDFProtoGuiAction implements ActionListener {
             checkArea.setText(previewText);
             // move scroll to top
             checkArea.setCaretPosition(0);
-        } catch (RuntimeException | InvalidVariableException  ex) {
+        } catch (RuntimeException  ex) {
             checkArea.setText(ex.getMessage());
             LOGGER.warn("Failed to test protobuf reading ", ex);
         }
