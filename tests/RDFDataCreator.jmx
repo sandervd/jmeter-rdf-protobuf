@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <be.vlaanderen.rdfproto.RDFProto guiclass="be.vlaanderen.rdfproto.RDFProtoGui" testclass="be.vlaanderen.rdfproto.RDFProto" testname="RDFDataCreator" enabled="true">
+        <stringProp name="filecontents">HgocCgZzY2hlbWESEmh0dHA6Ly9zY2hlbWEub3JnLzQKMgoDcmRmEitodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjLgosCgRza29zEiRodHRwOi8vd3d3LnczLm9yZy8yMDA0LzAyL3Nrb3MvY29yZSN1EnMKHwodChtodHRwOi8vZXhhbXBsZS5jb20vbW92aWVzLzESMwoxCi9odHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjdHlwZRobChkKF2h0dHA6Ly9zY2hlbWEub3JnL01vdmllUBJOCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8xEhoKGAoWaHR0cDovL3NjaGVtYS5vcmcvbmFtZRoPGg0KCUluY2VwdGlvbkgBhwEShAEKHwodChtodHRwOi8vZXhhbXBsZS5jb20vbW92aWVzLzESIQofCh1odHRwOi8vc2NoZW1hLm9yZy9kZXNjcmlwdGlvbho+GjwKOEEgbWluZC1iZW5kaW5nIHNjaS1maSB0aHJpbGxlciBhYm91dCBkcmVhbXMgYW5kIHJlYWxpdHkuSAFaElgKHwodChtodHRwOi8vZXhhbXBsZS5jb20vbW92aWVzLzESIwohCh9odHRwOi8vc2NoZW1hLm9yZy9kYXRlUHVibGlzaGVkGhAaDgoKMjAxMC0wNy0xNkgBexJ5CiQSIgogZGI2OTZiNjNiNjU0ZDQ1ZTUyNjA2NjQyZWI2OTE0OTQSMwoxCi9odHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjdHlwZRocChoKGGh0dHA6Ly9zY2hlbWEub3JnL1BlcnNvbl0SWwokEiIKIGRiNjk2YjYzYjY1NGQ0NWU1MjYwNjY0MmViNjkxNDk0EhoKGAoWaHR0cDovL3NjaGVtYS5vcmcvbmFtZRoXGhUKEUNocmlzdG9waGVyIE5vbGFuSAGPARKMAQokEiIKIGNkN2U0MDQ5ZTE5MjIwYzJiNzkyNjJiMzQwZWE2ZjY1EjMKMQovaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zI3R5cGUaLwotCitodHRwOi8vd3d3LnczLm9yZy8yMDA0LzAyL3Nrb3MvY29yZSNDb25jZXB0axJpCiQSIgogY2Q3ZTQwNDllMTkyMjBjMmI3OTI2MmIzNDBlYTZmNjUSMQovCi1odHRwOi8vd3d3LnczLm9yZy8yMDA0LzAyL3Nrb3MvY29yZSNwcmVmTGFiZWwaDhoMCghEaXJlY3RvckgBjwESjAEKJBIiCiBkNDkzMWRkODFjODdhYzA5MzAyZDliMGM0ZTNjMTI2YxIzCjEKL2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyN0eXBlGi8KLQoraHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjQ29uY2VwdGkSZwokEiIKIGQ0OTMxZGQ4MWM4N2FjMDkzMDJkOWIwYzRlM2MxMjZjEjEKLwotaHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjcHJlZkxhYmVsGgwaCgoGUGVyc29uSAF/En0KJBIiCiBjZDdlNDA0OWUxOTIyMGMyYjc5MjYyYjM0MGVhNmY2NRIvCi0KK2h0dHA6Ly93d3cudzMub3JnLzIwMDQvMDIvc2tvcy9jb3JlI2Jyb2FkZXIaJBIiCiBkNDkzMWRkODFjODdhYzA5MzAyZDliMGM0ZTNjMTI2Y2oSaAokEiIKIGRiNjk2YjYzYjY1NGQ0NWU1MjYwNjY0MmViNjkxNDk0EhoKGAoWaHR0cDovL3NjaGVtYS5vcmcvcm9sZRokEiIKIGNkN2U0MDQ5ZTE5MjIwYzJiNzkyNjJiMzQwZWE2ZjY1aRJnCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8xEh4KHAoaaHR0cDovL3NjaGVtYS5vcmcvZGlyZWN0b3IaJBIiCiBkYjY5NmI2M2I2NTRkNDVlNTI2MDY2NDJlYjY5MTQ5NHsSeQokEiIKIDYyOWMzNTczZmY0YzRhYzIxMTViMjg2MDgyNDMzNWI0EjMKMQovaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zI3R5cGUaHAoaChhodHRwOi8vc2NoZW1hLm9yZy9QZXJzb25dElsKJBIiCiA2MjljMzU3M2ZmNGM0YWMyMTE1YjI4NjA4MjQzMzViNBIaChgKFmh0dHA6Ly9zY2hlbWEub3JnL25hbWUaFxoVChFMZW9uYXJkbyBEaUNhcHJpb0gBjwESjAEKJBIiCiA3NDk0ODcyZTUxYmU5NjJlNTg4MzRlMmYzYjkxODMzMRIzCjEKL2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyN0eXBlGi8KLQoraHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjQ29uY2VwdGgSZgokEiIKIDc0OTQ4NzJlNTFiZTk2MmU1ODgzNGUyZjNiOTE4MzMxEjEKLwotaHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjcHJlZkxhYmVsGgsaCQoFQWN0b3JIAWoSaAokEiIKIDYyOWMzNTczZmY0YzRhYzIxMTViMjg2MDgyNDMzNWI0EhoKGAoWaHR0cDovL3NjaGVtYS5vcmcvcm9sZRokEiIKIDc0OTQ4NzJlNTFiZTk2MmU1ODgzNGUyZjNiOTE4MzMxZhJkCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8xEhsKGQoXaHR0cDovL3NjaGVtYS5vcmcvYWN0b3IaJBIiCiA2MjljMzU3M2ZmNGM0YWMyMTE1YjI4NjA4MjQzMzViNHsSeQokEiIKIDI2NDNmY2E4NzhmYzc0YmJhYTU1NDMyZGU3NjQzZGE4EjMKMQovaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zI3R5cGUaHAoaChhodHRwOi8vc2NoZW1hLm9yZy9QZXJzb25gEl4KJBIiCiAyNjQzZmNhODc4ZmM3NGJiYWE1NTQzMmRlNzY0M2RhOBIaChgKFmh0dHA6Ly9zY2hlbWEub3JnL25hbWUaGhoYChRKb3NlcGggR29yZG9uLUxldml0dEgBjwESjAEKJBIiCiA3YjYyZGJlNWE4YWRhNGRiOGZkMzg4Y2ViZmE2YjA2NhIzCjEKL2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyN0eXBlGi8KLQoraHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjQ29uY2VwdGgSZgokEiIKIDdiNjJkYmU1YThhZGE0ZGI4ZmQzODhjZWJmYTZiMDY2EjEKLwotaHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjcHJlZkxhYmVsGgsaCQoFQWN0b3JIAWoSaAokEiIKIDI2NDNmY2E4NzhmYzc0YmJhYTU1NDMyZGU3NjQzZGE4EhoKGAoWaHR0cDovL3NjaGVtYS5vcmcvcm9sZRokEiIKIDdiNjJkYmU1YThhZGE0ZGI4ZmQzODhjZWJmYTZiMDY2ZhJkCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8xEhsKGQoXaHR0cDovL3NjaGVtYS5vcmcvYWN0b3IaJBIiCiAyNjQzZmNhODc4ZmM3NGJiYWE1NTQzMmRlNzY0M2RhOFcSVQofCh0KG2h0dHA6Ly9leGFtcGxlLmNvbS9tb3ZpZXMvMRIbChkKF2h0dHA6Ly9zY2hlbWEub3JnL2dlbnJlGhUaEwoPU2NpZW5jZSBGaWN0aW9uSAFOEkwKHwodChtodHRwOi8vZXhhbXBsZS5jb20vbW92aWVzLzESGwoZChdodHRwOi8vc2NoZW1hLm9yZy9nZW5yZRoMGgoKBkFjdGlvbkgBURJPCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8xEh4KHAoaaHR0cDovL3NjaGVtYS5vcmcvZHVyYXRpb24aDBoKCgZQVDE0OE1IAVISUAofCh0KG2h0dHA6Ly9leGFtcGxlLmNvbS9tb3ZpZXMvMRIeChwKGmh0dHA6Ly9zY2hlbWEub3JnL2xhbmd1YWdlGg0aCwoHRW5nbGlzaEgBdRJzCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8yEjMKMQovaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zI3R5cGUaGwoZChdodHRwOi8vc2NoZW1hLm9yZy9Nb3ZpZUsSSQofCh0KG2h0dHA6Ly9leGFtcGxlLmNvbS9tb3ZpZXMvMhIaChgKFmh0dHA6Ly9zY2hlbWEub3JnL25hbWUaChoICgREdW5lSAGBARJ/Ch8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8yEiEKHwodaHR0cDovL3NjaGVtYS5vcmcvZGVzY3JpcHRpb24aORo3CjNBbiBlcGljIGFkYXB0YXRpb24gb2YgRnJhbmsgSGVyYmVydCdzIHNjaS1maSBub3ZlbC5IAVoSWAofCh0KG2h0dHA6Ly9leGFtcGxlLmNvbS9tb3ZpZXMvMhIjCiEKH2h0dHA6Ly9zY2hlbWEub3JnL2RhdGVQdWJsaXNoZWQaEBoOCgoyMDIxLTA5LTE1SAF7EnkKJBIiCiA1OTEyZTI5MzU0ZjFlYjc3ZjJkMjlhNTk1OWUzYjZhNRIzCjEKL2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyN0eXBlGhwKGgoYaHR0cDovL3NjaGVtYS5vcmcvUGVyc29uXBJaCiQSIgogNTkxMmUyOTM1NGYxZWI3N2YyZDI5YTU5NTllM2I2YTUSGgoYChZodHRwOi8vc2NoZW1hLm9yZy9uYW1lGhYaFAoQRGVuaXMgVmlsbGVuZXV2ZUgBjwESjAEKJBIiCiBmOGY3ZDlmN2I2NDI2ZmQwMDM3NWEzYzA1ZDYxMjdlNxIzCjEKL2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyN0eXBlGi8KLQoraHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjQ29uY2VwdGsSaQokEiIKIGY4ZjdkOWY3YjY0MjZmZDAwMzc1YTNjMDVkNjEyN2U3EjEKLwotaHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjcHJlZkxhYmVsGg4aDAoIRGlyZWN0b3JIAWoSaAokEiIKIDU5MTJlMjkzNTRmMWViNzdmMmQyOWE1OTU5ZTNiNmE1EhoKGAoWaHR0cDovL3NjaGVtYS5vcmcvcm9sZRokEiIKIGY4ZjdkOWY3YjY0MjZmZDAwMzc1YTNjMDVkNjEyN2U3aRJnCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8yEh4KHAoaaHR0cDovL3NjaGVtYS5vcmcvZGlyZWN0b3IaJBIiCiA1OTEyZTI5MzU0ZjFlYjc3ZjJkMjlhNTk1OWUzYjZhNXsSeQokEiIKIDVhNjk5MDQ1MzJmZTRkYjcxZWZmNjMyZDBhYjI0NzZjEjMKMQovaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zI3R5cGUaHAoaChhodHRwOi8vc2NoZW1hLm9yZy9QZXJzb25eElwKJBIiCiA1YTY5OTA0NTMyZmU0ZGI3MWVmZjYzMmQwYWIyNDc2YxIaChgKFmh0dHA6Ly9zY2hlbWEub3JnL25hbWUaGBoWChJUaW1vdGjDqWUgQ2hhbGFtZXRIAY8BEowBCiQSIgogODllMTJkZDE3ZTU5YmJlMGFiYWRjOGMzNzMxZGJmNDYSMwoxCi9odHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjdHlwZRovCi0KK2h0dHA6Ly93d3cudzMub3JnLzIwMDQvMDIvc2tvcy9jb3JlI0NvbmNlcHRoEmYKJBIiCiA4OWUxMmRkMTdlNTliYmUwYWJhZGM4YzM3MzFkYmY0NhIxCi8KLWh0dHA6Ly93d3cudzMub3JnLzIwMDQvMDIvc2tvcy9jb3JlI3ByZWZMYWJlbBoLGgkKBUFjdG9ySAFqEmgKJBIiCiA1YTY5OTA0NTMyZmU0ZGI3MWVmZjYzMmQwYWIyNDc2YxIaChgKFmh0dHA6Ly9zY2hlbWEub3JnL3JvbGUaJBIiCiA4OWUxMmRkMTdlNTliYmUwYWJhZGM4YzM3MzFkYmY0NmYSZAofCh0KG2h0dHA6Ly9leGFtcGxlLmNvbS9tb3ZpZXMvMhIbChkKF2h0dHA6Ly9zY2hlbWEub3JnL2FjdG9yGiQSIgogNWE2OTkwNDUzMmZlNGRiNzFlZmY2MzJkMGFiMjQ3NmN7EnkKJBIiCiA5NmQ0MDJmMmFlMjQ1NGU0ZDhjMmI3NTVmMWNmOGFiNRIzCjEKL2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyN0eXBlGhwKGgoYaHR0cDovL3NjaGVtYS5vcmcvUGVyc29uXBJaCiQSIgogOTZkNDAyZjJhZTI0NTRlNGQ4YzJiNzU1ZjFjZjhhYjUSGgoYChZodHRwOi8vc2NoZW1hLm9yZy9uYW1lGhYaFAoQUmViZWNjYSBGZXJndXNvbkgBjwESjAEKJBIiCiBmODY0ZDk2ZGUxM2UyMjkxZTU0NzVlYTFjNWNmNWUxZhIzCjEKL2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyN0eXBlGi8KLQoraHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjQ29uY2VwdGgSZgokEiIKIGY4NjRkOTZkZTEzZTIyOTFlNTQ3NWVhMWM1Y2Y1ZTFmEjEKLwotaHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjcHJlZkxhYmVsGgsaCQoFQWN0b3JIAWoSaAokEiIKIDk2ZDQwMmYyYWUyNDU0ZTRkOGMyYjc1NWYxY2Y4YWI1EhoKGAoWaHR0cDovL3NjaGVtYS5vcmcvcm9sZRokEiIKIGY4NjRkOTZkZTEzZTIyOTFlNTQ3NWVhMWM1Y2Y1ZTFmZhJkCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8yEhsKGQoXaHR0cDovL3NjaGVtYS5vcmcvYWN0b3IaJBIiCiA5NmQ0MDJmMmFlMjQ1NGU0ZDhjMmI3NTVmMWNmOGFiNVcSVQofCh0KG2h0dHA6Ly9leGFtcGxlLmNvbS9tb3ZpZXMvMhIbChkKF2h0dHA6Ly9zY2hlbWEub3JnL2dlbnJlGhUaEwoPU2NpZW5jZSBGaWN0aW9uSAFREk8KHwodChtodHRwOi8vZXhhbXBsZS5jb20vbW92aWVzLzISGwoZChdodHRwOi8vc2NoZW1hLm9yZy9nZW5yZRoPGg0KCUFkdmVudHVyZUgBURJPCh8KHQobaHR0cDovL2V4YW1wbGUuY29tL21vdmllcy8yEh4KHAoaaHR0cDovL3NjaGVtYS5vcmcvZHVyYXRpb24aDBoKCgZQVDE1NU1IAVISUAofCh0KG2h0dHA6Ly9leGFtcGxlLmNvbS9tb3ZpZXMvMhIeChwKGmh0dHA6Ly9zY2hlbWEub3JnL2xhbmd1YWdlGg0aCwoHRW5nbGlzaEgB</stringProp>
+      </be.vlaanderen.rdfproto.RDFProto>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">5</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">2</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${rdf_body}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8000</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
